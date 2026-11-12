@@ -9,7 +9,7 @@ style, data layers and panel layout. There are two forms.
 - **Short form** — `<app>/share/<code>`, where `<app>` is wherever the app is
   served (an origin's root, or a base path) and `<code>` is encoded and
   decoded by `src/share/viewCodec.js`, which is pure (no DOM, no Cesium) and
-  needs no server. Hosts import it as `@gods-eye-view/core/share/view-codec`
+  needs no server. Hosts import it as `@vineets-third-eye/core/share/view-codec`
   (a server can read a code to describe the view in a link preview). The share button makes this form. The same code opens on
   any copy of the app. `src/share/shareLinkPath.js` reads and builds the
   address, and `src/share/legacyShareState.js` converts between the long
@@ -70,7 +70,7 @@ vessel once it has it.
 
 ## Street-level photos (`sl`)
 
-Views built by `show_in_gods_eye_view` or `src/view/index.js` can add
+Views built by `show_in_vineets_third_eye` or `src/view/index.js` can add
 `sl=<source>,<lat>,<lon>` to the long form. Once the link has restored, the
 app opens the nearest photo there, or, for a source that bills every load,
 arms the panel so OPEN loads it (see `docs/TOOLS.md`). The app's own links do

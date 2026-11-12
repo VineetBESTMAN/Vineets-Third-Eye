@@ -20,7 +20,7 @@ export function textInstructions(annotationGuidance, options) {
   return realtimeDirectives(annotationGuidance, options)
     .map((line, index) => {
       if (index === 0)
-        return "You are GEV Chat, a concise text assistant for a Cesium geospatial app called God's Eye View.";
+        return "You are GEV Chat, a concise text assistant for a Cesium geospatial app called Vineet's Third Eye.";
       if (index === 1)
         return 'Have a natural written conversation. This is text-only chat; no microphone or generated audio is used.';
       return TEXT_WORDING.reduce(

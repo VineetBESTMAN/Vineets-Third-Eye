@@ -1,11 +1,14 @@
 {
-  "name": "gods-eye-view",
+  "name": "vineets-third-eye",
   "private": true,
   "version": "0.3.0",
-  "description": "A real-time intelligence console for planet Earth \u2014 photorealistic 3D globe, live aircraft/ships/satellites/earthquakes/CCTV, and hands-free voice control. Runs in a browser.",
+  "description": "Vineet's Third Eye — a local spatial intelligence dashboard for flights, ships, satellites and public geospatial data.",
   "type": "module",
   "license": "MIT",
-  "author": "Bilawal Sidhu",
+  "author": {
+    "name": "Vineet Madan",
+    "url": "https://github.com/VineetBESTMAN"
+  },
   "homepage": "https://github.com/VineetBESTMAN/Vineets-Third-Eye#readme",
   "repository": {
     "type": "git",
@@ -308,5 +311,11 @@
     "./agent/world-packet": "./src/agent/worldPacket.js",
     "./layers/wildlife-sightings": "./src/layers/wildlifeSightings/index.js",
     "./layers/wildlife-sightings/source": "./src/layers/wildlifeSightings/source.js"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Bilawal Sidhu (original codebase)",
+      "url": "https://github.com/bilawalsidhu"
+    }
+  ]
 }

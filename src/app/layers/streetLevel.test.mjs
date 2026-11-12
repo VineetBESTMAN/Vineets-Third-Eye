@@ -74,9 +74,11 @@ test('the defaults are Mapillary (given its source), Street View, KartaView and 
 });
 
 test('every built-in provider is exported, so hosts can choose their own list', async () => {
-  const google = await import('gods-eye-view/layers/street-level/google');
-  const kartaview = await import('gods-eye-view/layers/street-level/kartaview');
-  const panoramax = await import('gods-eye-view/layers/street-level/panoramax');
+  const google = await import('vineets-third-eye/layers/street-level/google');
+  const kartaview =
+    await import('vineets-third-eye/layers/street-level/kartaview');
+  const panoramax =
+    await import('vineets-third-eye/layers/street-level/panoramax');
   const layer = createApplicationStreetLevel({
     providers: [
       google.createGoogleProvider({ getApiKey: () => null }),

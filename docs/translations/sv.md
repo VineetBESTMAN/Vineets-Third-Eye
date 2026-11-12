@@ -1,3 +1,5 @@
+> Archived upstream translation. For current Vineet's Third Eye setup, ownership and feature guidance, use the [current README](../../README.md). Original names and links below are historical source references.
+
 # Swedish (`sv`)
 
 Catalog: `src/i18n/locales/sv.json`. General rules: [TRANSLATORS.md](../TRANSLATORS.md).

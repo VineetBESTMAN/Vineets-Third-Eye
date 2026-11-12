@@ -30,7 +30,9 @@ git push -u origin feat/descriptive-change
 gh pr create --base main --head feat/descriptive-change
 ```
 
-Use the PR description template and `AGENTS.md` for future work. CI is inherited and runs on PRs and pushes to `main`; a submitted run is not a passing run until GitHub reports its result. PR-only work is the project policy; this document does not claim branch-protection rules were enabled.
+Use the PR description template and `AGENTS.md` for future work. CI runs on PRs and pushes to `main`; a submitted run is not a passing run until GitHub reports its result.
+
+`main` is protected: PRs must be up to date and pass `Node 24.22.2`, `Node 26.x`, `Street Level browser gate`, and `Windows onboarding`, supplied by GitHub Actions. Required reviewer approvals are set to zero by the owner's choice so Vineet can review and merge his own PRs manually. Authors cannot submit approving reviews on their own PRs; manual review followed by Merge is the solo workflow. Administrators are included, and force pushes and deletion are blocked. Automated work must leave PRs open until the user explicitly requests merging.
 
 ## Local setup and backup
 

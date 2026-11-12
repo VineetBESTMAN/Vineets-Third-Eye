@@ -214,12 +214,12 @@ test('a grounded look-at near a pole stays on the globe', async () => {
   assert.ok(Math.abs(point.lat) <= 90 && Math.abs(point.lon) <= 180, JSON.stringify(point));
 });
 
-test('show_in_gods_eye_view frames the South Pole with a tilted camera', async () => {
+test('show_in_vineets_third_eye frames the South Pole with a tilted camera', async () => {
   const catalog = composeCatalog({
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' }, terrain: { getHeights: async () => [{ ellipsoid: 2835 }] } },
   });
-  const result = await catalog.call('show_in_gods_eye_view', {
+  const result = await catalog.call('show_in_vineets_third_eye', {
     camera: { lat: -90, lon: 0, altitude_m: 3500, pitch_deg: -30, heading_deg: 45 },
     street_level: { provider: 'mapillary' },
   });

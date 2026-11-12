@@ -159,7 +159,7 @@ import { isNoTrainPositionStop } from '../src/data/railNoPositions.js';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DEFAULT_OUT = path.join(ROOT, '.cache', 'rail-paths');
 const USER_AGENT =
-  'gods-eye-view-rail-paths/1.0 (+https://github.com/bilawalsidhu/gods-eye-view)';
+  'vineets-third-eye-rail-paths/1.0 (+https://github.com/VineetBESTMAN/Vineets-Third-Eye)';
 
 /** Vertex gap that marks a shape as a straight chord (m). */
 const MAX_VERTEX_GAP_M = 5000;

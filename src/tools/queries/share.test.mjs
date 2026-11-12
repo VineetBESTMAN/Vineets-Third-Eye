@@ -7,7 +7,7 @@ test('links open the app looking straight down on the area', async () => {
     tools: coreTools,
     services: { app: { baseUrl: 'https://maps.example/view?x=1' } },
   });
-  const result = await catalog.call('show_in_gods_eye_view', {
+  const result = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 30.2672, lon: -97.7431, radius_km: 5 },
   });
   const url = new URL(result.data.url);
@@ -26,7 +26,7 @@ test('links open the app looking straight down on the area', async () => {
   });
   assert.equal(
     result.summary,
-    `Open 5 km around 30.267, -97.743 in God's Eye View: ${url.href}`,
+    `Open 5 km around 30.267, -97.743 in Vineet's Third Eye: ${url.href}`,
   );
 });
 
@@ -35,11 +35,11 @@ test('altitude is bounded for tiny and planet-sized areas', async () => {
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' } },
   });
-  const tiny = await catalog.call('show_in_gods_eye_view', {
+  const tiny = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 0, lon: 0, radius_km: 0.1 },
   });
   assert.equal(tiny.data.view.camera.altitude_m, 500);
-  const world = await catalog.call('show_in_gods_eye_view', {
+  const world = await catalog.call('show_in_vineets_third_eye', {
     area: { bbox: [-180, -85, 180, 85] },
   });
   assert.equal(world.data.view.camera.altitude_m, 15000000);
@@ -48,7 +48,7 @@ test('altitude is bounded for tiny and planet-sized areas', async () => {
     services: { app: { baseUrl: 'not a url' } },
   });
   await assert.rejects(
-    broken.call('show_in_gods_eye_view', {
+    broken.call('show_in_vineets_third_eye', {
       area: { lat: 0, lon: 0, radius_km: 1 },
     }),
     (error) => error.code === 'unavailable',
@@ -61,7 +61,7 @@ test('links turn on the requested layers with the app share-link codec', async (
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' } },
   });
-  const result = await catalog.call('show_in_gods_eye_view', {
+  const result = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 30.27, lon: -97.74, radius_km: 10 },
     layers: ['earthquakes', 'flights', 'flights'],
   });
@@ -72,7 +72,7 @@ test('links turn on the requested layers with the app share-link codec', async (
     'flights',
   ]);
   await assert.rejects(
-    catalog.call('show_in_gods_eye_view', {
+    catalog.call('show_in_vineets_third_eye', {
       area: { lat: 0, lon: 0, radius_km: 1 },
       layers: ['not-a-layer'],
     }),
@@ -86,7 +86,7 @@ test('links carry a camera, style, map and an entity to follow', async () => {
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' } },
   });
-  const result = await catalog.call('show_in_gods_eye_view', {
+  const result = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 25, lon: 121, radius_km: 200 },
     camera: { pitch_deg: -40, heading_deg: 350 },
     layers: ['ais-live-vessels'],
@@ -103,13 +103,13 @@ test('links carry a camera, style, map and an entity to follow', async () => {
     id: 'ae1234',
   });
   assert.equal(result.data.view.camera.pitch_deg, -40);
-  const camera = await catalog.call('show_in_gods_eye_view', {
+  const camera = await catalog.call('show_in_vineets_third_eye', {
     camera: { lat: 48.8584, lon: 2.2945, altitude_m: 1200, pitch_deg: -30 },
   });
   assert.equal(camera.data.view.camera.altitude_m, 1200);
-  assert.match(camera.summary, /^Open 48\.858, 2\.295 in God's Eye View: /);
+  assert.match(camera.summary, /^Open 48\.858, 2\.295 in Vineet's Third Eye: /);
   await assert.rejects(
-    catalog.call('show_in_gods_eye_view', { layers: ['flights'] }),
+    catalog.call('show_in_vineets_third_eye', { layers: ['flights'] }),
     /Give a view, an area, or a camera with lat and lon/,
   );
 });
@@ -120,7 +120,7 @@ test('links can open street-level photos at the area, on the map the source need
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' } },
   });
-  const result = await catalog.call('show_in_gods_eye_view', {
+  const result = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 38.5799, lon: -121.4937, radius_km: 1 },
     street_level: { provider: 'google' },
   });
@@ -139,7 +139,7 @@ test('links can open street-level photos at the area, on the map the source need
   // The panel opens a billed photo only for a result it gets fresh.
   assert.ok(Math.abs(Date.now() - result.data.issued_at) < 60_000);
 
-  const point = await catalog.call('show_in_gods_eye_view', {
+  const point = await catalog.call('show_in_vineets_third_eye', {
     view,
     street_level: { provider: 'mapillary', lat: 38.58, lon: -121.49 },
   });
@@ -149,7 +149,7 @@ test('links can open street-level photos at the area, on the map the source need
     lon: -121.49,
   });
   await assert.rejects(
-    catalog.call('show_in_gods_eye_view', {
+    catalog.call('show_in_vineets_third_eye', {
       area: { lat: 0, lon: 0, radius_km: 1 },
       map: 'osm',
       street_level: { provider: 'google' },
@@ -163,11 +163,11 @@ test('a new area or camera position moves a passed-through view’s photos, and 
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' } },
   });
-  const first = await catalog.call('show_in_gods_eye_view', {
+  const first = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 38.5799, lon: -121.4937, radius_km: 1 },
     street_level: { provider: 'google' },
   });
-  const second = await catalog.call('show_in_gods_eye_view', {
+  const second = await catalog.call('show_in_vineets_third_eye', {
     view: first.data.view,
     area: { lat: 42.3314, lon: -83.0458, radius_km: 1 },
   });
@@ -177,7 +177,7 @@ test('a new area or camera position moves a passed-through view’s photos, and 
     lon: -83.0458,
   });
   // A new camera position moves them too; turning the camera keeps them.
-  const moved = await catalog.call('show_in_gods_eye_view', {
+  const moved = await catalog.call('show_in_vineets_third_eye', {
     view: first.data.view,
     camera: { lat: 40.758, lon: -73.9855, altitude_m: 800, pitch_deg: -90 },
   });
@@ -186,12 +186,12 @@ test('a new area or camera position moves a passed-through view’s photos, and 
     lat: 40.758,
     lon: -73.9855,
   });
-  const turned = await catalog.call('show_in_gods_eye_view', {
+  const turned = await catalog.call('show_in_vineets_third_eye', {
     view: first.data.view,
     camera: { heading_deg: 90 },
   });
   assert.deepEqual(turned.data.view.street_level, first.data.view.street_level);
-  const tilted = await catalog.call('show_in_gods_eye_view', {
+  const tilted = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 48.8584, lon: 2.2945, radius_km: 1 },
     camera: { pitch_deg: -30 },
     street_level: { provider: 'mapillary' },
@@ -208,7 +208,7 @@ test('a new area or camera position moves a passed-through view’s photos, and 
   });
   // A wide area frames the camera tens of km up, past where a camera's
   // look-at point is trusted: the photos still open at the area's centre.
-  const wide = await catalog.call('show_in_gods_eye_view', {
+  const wide = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 48.8584, lon: 2.2945, radius_km: 15 },
     camera: { pitch_deg: -30 },
     street_level: { provider: 'mapillary' },
@@ -220,7 +220,7 @@ test('a new area or camera position moves a passed-through view’s photos, and 
     lon: 2.2945,
   });
   await assert.rejects(
-    catalog.call('show_in_gods_eye_view', {
+    catalog.call('show_in_vineets_third_eye', {
       area: { lat: 0, lon: 0, radius_km: 1 },
       follow: { kind: 'aircraft', id: 'AE1234' },
       street_level: {},
@@ -252,7 +252,7 @@ test('a camera with no photo point opens photos where it looks, measured from it
     pitch_deg: -30,
     heading_deg: 0,
   };
-  const result = await catalog.call('show_in_gods_eye_view', {
+  const result = await catalog.call('show_in_vineets_third_eye', {
     camera,
     street_level: { provider: 'mapillary' },
   });
@@ -276,7 +276,7 @@ test('a camera with no photo point opens photos where it looks, measured from it
       },
     },
   });
-  const fallback = await offline.call('show_in_gods_eye_view', {
+  const fallback = await offline.call('show_in_vineets_third_eye', {
     camera,
     street_level: { provider: 'mapillary' },
   });
@@ -289,11 +289,11 @@ test('a view passed through alone keeps its street-level photos', async () => {
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:4173/' } },
   });
-  const first = await catalog.call('show_in_gods_eye_view', {
+  const first = await catalog.call('show_in_vineets_third_eye', {
     area: { lat: 38.5799, lon: -121.4937, radius_km: 1 },
     street_level: { provider: 'mapillary' },
   });
-  const again = await catalog.call('show_in_gods_eye_view', {
+  const again = await catalog.call('show_in_vineets_third_eye', {
     view: first.data.view,
   });
   assert.deepEqual(again.data.view.street_level, first.data.view.street_level);

@@ -127,7 +127,7 @@ for (const hook of ['configureServer', 'configurePreviewServer']) {
           assert.ok(options.signal instanceof AbortSignal);
           assert.match(
             options.headers['User-Agent'],
-            /^gods-eye-view-wildlife-sightings-proxy/,
+            /^vineets-third-eye-wildlife-sightings-proxy/,
           );
           return Response.json(syntheticGrid());
         },

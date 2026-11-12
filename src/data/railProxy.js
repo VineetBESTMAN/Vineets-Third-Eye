@@ -432,7 +432,7 @@ export function buildRailTripUpdatesSnapshot(
 export function railUpstreamHeaders(feed, validators = null) {
   return {
     'User-Agent':
-      'gods-eye-view-rail-proxy/1.0 (+https://github.com/bilawalsidhu/gods-eye-view)',
+      'vineets-third-eye-rail-proxy/1.0 (+https://github.com/VineetBESTMAN/Vineets-Third-Eye)',
     Accept: 'application/x-protobuf, application/octet-stream;q=0.9, */*;q=0.1',
     'Accept-Encoding': 'gzip',
     ...(validators?.etag ? { 'If-None-Match': validators.etag } : {}),

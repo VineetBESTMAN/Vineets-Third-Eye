@@ -234,7 +234,7 @@ test('upstream headers identify the rail proxy and let a feed override Accept', 
     etag: '"abc"',
     lastModified: 'Thu, 01 Jan 2026 00:00:00 GMT',
   });
-  assert.match(plain['User-Agent'], /gods-eye-view-rail-proxy/);
+  assert.match(plain['User-Agent'], /vineets-third-eye-rail-proxy/);
   assert.equal(plain['If-None-Match'], '"abc"');
   assert.equal(plain['If-Modified-Since'], 'Thu, 01 Jan 2026 00:00:00 GMT');
   const adelaide = railUpstreamHeaders(getRegisteredRailFeed('adelaide-metro'));

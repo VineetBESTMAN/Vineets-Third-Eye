@@ -24,8 +24,8 @@ const PUBLIC_NOMINATIM_HOST = 'nominatim.openstreetmap.org';
  */
 const NOMINATIM_HEADERS = Object.freeze({
   'User-Agent':
-    'gods-eye-view/0.1 (+https://github.com/bilawalsidhu/gods-eye-view)',
-  Referer: 'https://github.com/bilawalsidhu/gods-eye-view',
+    'vineets-third-eye/0.1 (+https://github.com/VineetBESTMAN/Vineets-Third-Eye)',
+  Referer: 'https://github.com/VineetBESTMAN/Vineets-Third-Eye',
 });
 
 /** Absolute policy maximum is one request per second; 1.1 s absorbs jitter. */

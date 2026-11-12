@@ -710,7 +710,7 @@ export const WOF_CREDIT = {
   html:
     'Neighborhood boundaries: ' +
     '<a href="https://whosonfirst.org/docs/licenses/" target="_blank" rel="noopener">Who\'s On First</a> and contributors, simplified (' +
-    '<a href="https://github.com/bilawalsidhu/gods-eye-view/blob/main/src/data/local_data/wof_neighborhoods/ATTRIBUTION.md" target="_blank" rel="noopener">sources and licences</a>)',
+    '<a href="https://github.com/VineetBESTMAN/Vineets-Third-Eye/blob/main/src/data/local_data/wof_neighborhoods/ATTRIBUTION.md" target="_blank" rel="noopener">sources and licences</a>)',
 };
 
 /** Registered when a voice place search (a configured Overpass) first shows places. */

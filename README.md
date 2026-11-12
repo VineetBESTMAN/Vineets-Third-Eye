@@ -4,6 +4,8 @@
 
 **GOD IS WATCHING EVERYTHING** — personalized edition of God's Eye View. See [HOW-TO-USE.md](HOW-TO-USE.md) for flights, ships and satellite controls.
 
+Standalone repository: [VineetBESTMAN/Vineets-Third-Eye](https://github.com/VineetBESTMAN/Vineets-Third-Eye). Future changes use task branches and pull requests; see [REPOSITORY-WORKFLOW.md](REPOSITORY-WORKFLOW.md). Original license and source attribution are preserved.
+
 > **Windows local copy:** see [LOCAL-WINDOWS.md](LOCAL-WINDOWS.md) for setup and launch instructions, and [LOCAL-VALIDATION.md](LOCAL-VALIDATION.md) for verification results on this PC.
 
 [![CI](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml) [![Reached #1 on GitHub Trending](https://img.shields.io/badge/%231_GitHub_Trending-thank_you!-F0A63C?style=flat-square&logo=github)](https://x.com/bilawalsidhu/status/2093798887815348521)

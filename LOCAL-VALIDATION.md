@@ -1,5 +1,7 @@
 # Windows validation record
 
+> Historical setup record: this validation predates the standalone repository migration. Old fork URLs and commit IDs below describe that original setup. Current repository and workflow: [REPOSITORY-WORKFLOW.md](REPOSITORY-WORKFLOW.md).
+
 Date: 12 November 2026 (Asia/Calcutta). Repository: `F:\OSINT project\gods-eye-view`.
 
 ## Provenance and environment

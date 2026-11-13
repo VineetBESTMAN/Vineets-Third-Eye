@@ -1,3 +1,4 @@
 - Present Vineet's Third Eye consistently in the README, package metadata, installation guides, Pinokio launcher, MCP panels, provider request headers and support links. Keep original source and asset attribution in dedicated notices and clearly label inherited release notes.
 - Use protected-main development through PRs, with all four CI checks required and manual review/merging by Vineet. Remove the inherited Discord announcement workflow, and retain branch commits through merge commits.
 - Remove obsolete tagline translations so catalog checks match the custom GOD IS WATCHING EVERYTHING branding.
+- Refresh the pinned voice-tool payloads for the intentional product-name changes in fly_to_location, set_layer_visibility and set_visual_style. Tool names, arguments and behavior are unchanged; the description change invalidates the previous voice-session payload cache. Targeted schema/first-run/radio checks pass; live microphone testing was not performed.

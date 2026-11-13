@@ -698,7 +698,7 @@ test('public transit documentation uses courtesy attribution and the approved gr
   );
   assert.ok(
     readme.includes(
-      'Twenty-three layers and map sources. **Twenty-one have a keyless path.**',
+      'No personal key needed for the supported anonymous routes; coverage and rate limits apply',
     ),
   );
   assert.ok(

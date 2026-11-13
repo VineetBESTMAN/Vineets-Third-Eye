@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { EventEmitter } from 'node:events';
 import { Readable } from 'node:stream';
 import { readPinokioEnvironment } from '../scripts/pinokio-environment.mjs';
-import { openAiRealtimeProxy } from 'gods-eye-view/server/providers/openai';
+import { openAiRealtimeProxy } from 'vineets-third-eye/server/providers/openai';
 import { geminiLiveProxy } from '../server/providers/gemini.js';
 import { GEMINI_DEFAULT_PER_MIN } from '../server/providers/gemini/chat.js';
 import {

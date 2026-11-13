@@ -51,7 +51,7 @@ export function isHudSummaryUnconfigured(status, data) {
  * does not depend on the summary's language or wording.
  */
 export const HUD_SUMMARY_INSTRUCTIONS = [
-  "Write one concise intelligence-HUD summary for God's Eye View.",
+  "Write one concise intelligence-HUD summary for Vineet's Third Eye.",
   'Use only the supplied place, street, nearby-place, enabled-layer labels, and feedProvenance.',
   'Prefer the clearest named place and include a relevant enabled layer only when useful.',
   'In the summary, name layers only as in enabledLayerLabels; never copy layer names or state words from feedProvenance into it.',

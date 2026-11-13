@@ -45,7 +45,7 @@ const WIKIDATA_URL =
   encodeURIComponent(WIKIDATA_QUERY);
 // Wikimedia asks automated clients to name themselves.
 const USER_AGENT =
-  "God's Eye View shipwrecks layer (https://github.com/bilawalsidhu/gods-eye-view)";
+  "Vineet's Third Eye shipwrecks layer (https://github.com/VineetBESTMAN/Vineets-Third-Eye)";
 
 /** Fixed-origin, cached EMODnet + Wikidata shipwreck snapshot for dev and preview. */
 export function shipwrecksProxy({

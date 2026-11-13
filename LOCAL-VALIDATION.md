@@ -1,5 +1,7 @@
 # Windows validation record
 
+> Historical setup record: this validation predates the standalone repository migration. Old fork URLs and commit IDs below describe that original setup. Current repository and workflow: [REPOSITORY-WORKFLOW.md](REPOSITORY-WORKFLOW.md).
+
 Date: 12 November 2026 (Asia/Calcutta). Repository: `F:\OSINT project\gods-eye-view`.
 
 ## Provenance and environment
@@ -9,7 +11,7 @@ Date: 12 November 2026 (Asia/Calcutta). Repository: `F:\OSINT project\gods-eye-v
 - 3,730 upstream commits reachable from the final base; all 30 upstream branches and five tags fetched. No shallow clone or sparse checkout.
 - Windows x64; portable Node **24.22.3**, npm **11.19.1**; system Node **18.18.0** left unchanged.
 - Locked dependencies installed locally. Vite lockfile updated from **6.4.4** to **6.4.6** to address its reported filesystem-deny bypass advisory.
-- GitHub fork: <https://github.com/VineetBESTMAN/gods-eye-view> (public, matching the public upstream).
+- The initial validation used an earlier public fork; the current product repository is <https://github.com/VineetBESTMAN/Vineets-Third-Eye>.
 - `origin` points to the user's fork; `upstream` retains the original repository.
 
 ## Verification results

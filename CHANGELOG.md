@@ -1,5 +1,7 @@
 # Changelog
 
+> Historical release record inherited with the source. Entries, contributor credits and PR numbers below predate this standalone product history. Current changes are recorded in this repository's PRs and `changelog.d/`. See `SOURCE-ATTRIBUTION.md`.
+
 ## [Unreleased]
 
 - An application's own tool can take the pointer as Draw does, and its click

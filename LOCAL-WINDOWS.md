@@ -1,6 +1,6 @@
-# Local Windows handover
+# Vineet's Third Eye — Windows guide
 
-This is a complete Git clone of [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view), with its source, bundled assets, original documentation, license, branches and tags fetched locally. The starting `main` commit is `202cb8c3dcf88d101398d74bc684385b74b9da30` (3,728 reachable commits). Upstream attribution and third-party notices are preserved.
+This guide covers the local Windows installation of [Vineet's Third Eye](https://github.com/VineetBESTMAN/Vineets-Third-Eye). The standalone repository contains the application, bundled assets, setup scripts and documentation. See `SOURCE-ATTRIBUTION.md` for source provenance and `REPOSITORY-WORKFLOW.md` for the fresh history and local backup.
 
 ## Start on this PC
 
@@ -83,15 +83,15 @@ Use the app's **Provider Settings** and consult `.env.example` for all supported
 
 ## Updating the copy
 
-`origin` is intended to point at your GitHub copy and `upstream` at the original project. Review updates before merging:
+`origin` now points to the standalone `VineetBESTMAN/Vineets-Third-Eye` repository. The new history has no `upstream` remote. Update from your own `main` and create a task branch:
 
 ```powershell
-git fetch upstream --tags
-git log --oneline HEAD..upstream/main
-git merge upstream/main
+git switch main
+git pull --ff-only origin main
+git switch -c chore/descriptive-update
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\windows.ps1 -Action Install
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\windows.ps1 -Action Check
-git push origin main
+git push -u origin chore/descriptive-update
 ```
 
-Resolve any merge conflicts before testing and pushing. Preserve the original license and all data/asset-specific notices when redistributing.
+Open a PR against `main` after committing the update. See `REPOSITORY-WORKFLOW.md` for the migration and contribution policy. Preserve the original license and all data/asset-specific notices when redistributing.

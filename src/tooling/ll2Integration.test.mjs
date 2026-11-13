@@ -45,10 +45,10 @@ for (const [date, end] of [
 
 test('LL2 headers identify the app and preserve optional server-only authorization', () => {
   const publicHeaders = launchLibraryRequestHeaders('');
-  assert.match(publicHeaders['User-Agent'], /^gods-eye-view.*\/1\.0 /);
+  assert.match(publicHeaders['User-Agent'], /^vineets-third-eye.*\/1\.0 /);
   assert.ok(
     publicHeaders['User-Agent'].includes(
-      'https://github.com/bilawalsidhu/gods-eye-view',
+      'https://github.com/VineetBESTMAN/Vineets-Third-Eye',
     ),
   );
   assert.equal(publicHeaders.Accept, 'application/json');
@@ -133,7 +133,7 @@ test('real LL2 proxy sends cacheable headers and bounds, retaining its memory ca
   assert.equal(second.body, first.body);
   assert.equal(second.headers['X-GEV-Cache'], 'HIT');
   assert.equal(calls.length, 1);
-  assert.match(calls[0].options.headers['User-Agent'], /gods-eye-view/);
+  assert.match(calls[0].options.headers['User-Agent'], /vineets-third-eye/);
   assert.match(calls[0].url.searchParams.get('net__lte'), /:00\.000Z$/);
   assert.match(calls[0].url.searchParams.get('net__gte'), /:00\.000Z$/);
 });
@@ -189,7 +189,7 @@ for (const preview of [false, true]) {
       assert.equal(received.length, 1);
       assert.match(
         received[0].headers['user-agent'],
-        /^gods-eye-view-launch-library-proxy\/1\.0 /,
+        /^vineets-third-eye-launch-library-proxy\/1\.0 /,
       );
       assert.equal(received[0].headers.authorization, undefined);
       assert.match(received[0].url.searchParams.get('net__lte'), /:00\.000Z$/);

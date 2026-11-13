@@ -1,12 +1,11 @@
 # Community PR review and integration
 
-Either maintainer listed in [CONTRIBUTING.md](../CONTRIBUTING.md) can accept a
-contribution. The [community-pr skill](../.agents/skills/community-pr/SKILL.md)
+The maintainer listed in [CONTRIBUTING.md](../CONTRIBUTING.md) manages contributions, subject to the required CI checks and the owner's manual review/merge workflow. The [community-pr skill](../.agents/skills/community-pr/SKILL.md)
 uses this procedure; contributor setup remains in `CONTRIBUTING.md`.
 
 ## 1. Establish the review
 
-Verify upstream is `bilawalsidhu/gods-eye-view`, fetch `main`, and record its SHA
+Verify upstream is `VineetBESTMAN/Vineets-Third-Eye`, fetch `main`, and record its SHA
 as the policy revision. Read this workflow, the skill,
 [SECURITY.md](../SECURITY.md), `CONTRIBUTING.md`, and relevant
 [CURRENT-STATE.md](CURRENT-STATE.md) sections from that revision with

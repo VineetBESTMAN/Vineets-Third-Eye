@@ -112,9 +112,9 @@ test('observation links accept only canonical source pages and fall back to the 
 });
 
 test('wildlife package entries construct without acquiring data or a DOM', async () => {
-  const api = await import('gods-eye-view/layers/wildlife-sightings');
+  const api = await import('vineets-third-eye/layers/wildlife-sightings');
   const sources =
-    await import('gods-eye-view/layers/wildlife-sightings/source');
+    await import('vineets-third-eye/layers/wildlife-sightings/source');
   const layer = api.createWildlifeSightingsLayer({
     source: sources.createWildlifeSightingsSource({
       fetchImpl() {

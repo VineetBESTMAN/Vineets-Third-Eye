@@ -67,7 +67,7 @@ test('a download follows https redirects hop by hop and records where it ended',
   );
   for (const { init } of calls) {
     assert.equal(init.redirect, 'manual');
-    assert.match(init.headers['User-Agent'], /gods-eye-view-rail-paths/);
+    assert.match(init.headers['User-Agent'], /vineets-third-eye-rail-paths/);
     assert.equal(init.headers['Digitraffic-User'], 'GodsEyeView/RailLayer');
   }
   assert.equal(got.finalUrl, 'https://cdn.example.test/files/gtfs.zip');

@@ -130,7 +130,7 @@ export function keepPanelRendering(
     (_scene, error) => {
       failed = true;
       console.error(
-        "[God's Eye View panel] render error:",
+        "[Vineet's Third Eye panel] render error:",
         describeError(error),
       );
     },
@@ -490,7 +490,7 @@ export function installViews({
     // just now may open a billed photo. A framing page's view is its own.
     const autoOpen = !isEmbeddedInline() || event.data.fresh === true;
     // Photos asked for without a point open where the camera looks, measured
-    // from the ground under it, as show_in_gods_eye_view places them.
+    // from the ground under it, as show_in_vineets_third_eye places them.
     const asked = event.data.view?.street_level;
     const unplaced =
       asked &&

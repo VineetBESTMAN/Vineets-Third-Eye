@@ -1,4 +1,10 @@
-# God's Eye View Current State
+# Vineet's Third Eye — current state and inherited engineering notes
+
+Current product identity: Vineet's Third Eye, maintained in `VineetBESTMAN/Vineets-Third-Eye`. Runtime names, package imports, provider contact URLs, launcher labels and public setup docs use this identity. The custom tagline is GOD IS WATCHING EVERYTHING. See the root README and REPOSITORY-WORKFLOW.md for current ownership, setup and protected-branch policy.
+
+The engineering notes below were inherited with the source. Historical repository names, PR numbers and contributor credits identify the original development record; they are not current product ownership or installation instructions. See SOURCE-ATTRIBUTION.md at the repository root.
+
+## Inherited engineering record
 
 Docker Compose mounts the checkout with the shared SELinux `:z` label so
 containers can read it on enforcing SELinux hosts. The separate image-owned
@@ -408,7 +414,7 @@ it sits collapsed in the Layers sheet under Data Layers.
 
 Tool answers that can be shown in God's Eye View include a view: camera, layers,
 style, map, marks and an aircraft or satellite to follow, written in the
-share-link format (`gods-eye-view/view`). `show_in_gods_eye_view` shows a view as live
+share-link format (`gods-eye-view/view`). `show_in_vineets_third_eye` shows a view as live
 God's Eye View inside clients that display MCP Apps, and as a link everywhere.
 The panel runs the app's panel build (`npm run build:panel`, served at
 `/panel/`) and loads it, with its data, through the MCP server, so it works
@@ -2235,7 +2241,7 @@ Stopping the controller revokes animation before asynchronous UI teardown; final
 destruction removes its stages and restores the borrowed bloom configuration.
 Snow is no longer a visual preset. A share link that names it, in either the
 long or compact form, opens on Normal and drops the Snow shader parameters. A
-view passed to embed mode or `show_in_gods_eye_view`, and a saved scene shot,
+view passed to embed mode or `show_in_vineets_third_eye`, and a saved scene shot,
 that names Snow also open on Normal.
 Sharpen runs only when enabled with intensity above 0.001. At slider zero its
 stage is disabled; raising the slider resumes it when sharpen is enabled.
@@ -5322,7 +5328,7 @@ a point, which defaults to where the camera looks (below 20 km, at a pitch
 steeper than -5° and within 10 km ahead; else the camera's own point); half a
 point is not mixed with the camera's: both coordinates come from that default. A `google` source brings `map: photoreal` and refuses
 another map; `street_level` does not combine with `follow`.
-`show_in_gods_eye_view`, and the embedded app for a posted view with no
+`show_in_vineets_third_eye`, and the embedded app for a posted view with no
 point, measure the view's altitude from the terrain under the camera
 (`groundedLookAt` with the terrain heights service) before taking the look-at
 point, and keep the view's own estimate without a terrain answer (the embedded
@@ -5342,7 +5348,7 @@ and a plain link runs it once restored (one shot: the rewritten hash drops
   key here changes nothing and says so in a toast (not in a frame).
 - **Who may open.** Posted views, and the panel page's own link (inline embed)
   for a tool result issued in the last 5 minutes, open the photo:
-  `show_in_gods_eye_view` stamps a street-level result `issued_at`, every
+  `show_in_vineets_third_eye` stamps a street-level result `issued_at`, every
   `gev:view` the panel posts carries `fresh`, and the inline app applies a
   view without it with `autoOpen: false` (a framing page's posted views still
   open). `?embed=1` on a published link only arms, without the panel nudge or

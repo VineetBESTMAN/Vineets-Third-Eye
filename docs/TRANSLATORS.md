@@ -1,4 +1,4 @@
-# Translating God's Eye View
+# Translating Vineet's Third Eye
 
 Shipped languages: **English** (source and fallback), **Arabic** (`ar`), **German** (`de`), **Spanish** (`es`), **French** (`fr`), **Hebrew** (`he`), **Italian** (`it`), **Japanese** (`ja`), **Brazilian Portuguese** (`pt`), **Russian** (`ru`), **Swedish** (`sv`), **Ukrainian** (`uk`), **Simplified Chinese** (`zh-CN`) and **Traditional Chinese** (`zh-Hant`).
 

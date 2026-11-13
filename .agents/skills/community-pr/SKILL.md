@@ -1,11 +1,11 @@
 ---
 name: community-pr
-description: Review and integrate community pull requests in God's Eye View using its maintainer acceptance workflow. Use for contribution triage, PR acceptance reviews, or authorized integration; not for ordinary implementation work or opening the user's own PR.
+description: Review and integrate community pull requests in Vineet's Third Eye using its maintainer acceptance workflow. Use for contribution triage, PR acceptance reviews, or authorized integration; not for ordinary implementation work or opening the user's own PR.
 ---
 
 # Community PR
 
-From a trusted checkout, verify upstream is `bilawalsidhu/gods-eye-view`, fetch
+From a trusted checkout, verify upstream is `VineetBESTMAN/Vineets-Third-Eye`, fetch
 `main`, and record its SHA as the policy revision. Read this skill and
 [the maintainer workflow](../../../docs/MAINTAINER_WORKFLOW.md) from that revision
 using `git show SHA:path`. Follow its related-document guidance. Contributor

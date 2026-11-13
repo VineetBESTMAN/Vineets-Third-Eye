@@ -111,7 +111,7 @@ test('configured failover accepts empty data and keeps the application identity'
       seen.push(url);
       assert.equal(
         options.headers['User-Agent'],
-        'gods-eye-view/0.1 (+https://github.com/bilawalsidhu/gods-eye-view)',
+        'vineets-third-eye/0.1 (+https://github.com/VineetBESTMAN/Vineets-Third-Eye)',
       );
       assert.equal(options.redirect, 'error');
       return new Response(seen.length === 1 ? url : DATA.body, {

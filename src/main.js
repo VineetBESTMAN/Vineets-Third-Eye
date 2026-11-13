@@ -14,7 +14,7 @@ const application = createStandaloneApplication({
 });
 
 application.start().catch((error) => {
-  console.error("God's Eye View initialization failed:", error);
+  console.error("Vineet's Third Eye initialization failed:", error);
   const loaderStatus = document.querySelector('#loading-screen .loader-status');
   loaderStatus.textContent = t('Error: {message}', {
     message: describeError(error),

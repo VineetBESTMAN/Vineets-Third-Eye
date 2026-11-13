@@ -1,4 +1,4 @@
-// God's Eye View i18n: the English source text is the message key.
+// Vineet's Third Eye i18n: the English source text is the message key.
 //
 //   t('Save keys')                                   → 'Сохранить ключи'
 //   t('Cleared {name}', { name })                    → named interpolation
